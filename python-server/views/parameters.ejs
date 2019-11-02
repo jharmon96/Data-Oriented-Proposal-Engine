@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <% include partials/menu %>
+      <title>Python Scripts</title>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/assets/python.js"></script>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><%= script.replace(/\-/g," ") %></h1>            
+        <h2 id="success"></h2>
+        <div id="param-table">
+            <form id="submit-params" class="submit-params">
+                <input class="param-text" type="param-text" id="URL" name="URL" placeholder="URL..." required />
+                <input class="param-text" type="param-text" id="username" name="username" placeholder="Username..." required />
+                <input class="param-text" type="password" id="password" name="password" placeholder="Password..." required />
+                <% for(var i=0; i < script_params.length; i++){ %>
+                    <% if (script_params[i].key == script){ %>
+                        <input class="param-text" type="param-text" id="<%=script_params[i].value%>" name="<%=script_params[i].value%>" placeholder="<%= script_params[i].value %>..." required />
+                    <% } %>
+                <% } %>
+                <button type="submit">Run</button>
+            </form>
+            <form id="submit-file" class="submit-file">
+                <input id="csv" name="file" type ="file" value="filename"/>
+                <input type="submit" value="Upload"/>
+            </form>
+        </div>
+    </body>
+    <footer>Unanet 2019 - Washington, DC</footer>
+</html>

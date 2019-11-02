@@ -1,0 +1,177 @@
+body{
+    background: #0d1521;
+    font-family: tahoma;
+    color: #989898;
+}
+
+#python-script-table{
+    position: relative;
+    width: 95%;
+    background: #090d13;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+#python-script-table form:after{
+    margin: 0;
+    content: '';
+    display: block;
+    clear: both;
+}
+
+input[type="text"]{
+    width: 70%;
+    padding: 20px;
+    background:#181c22;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: #989898;
+}
+
+#param-table{
+    position: relative;
+    width: 60%;
+    background: #090d13;
+    margin: 0 auto;
+    padding-top: 20;
+    padding-left: 20;
+    padding-right: 20;
+    margin-bottom: 20;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+}
+
+#param-table form:after{
+    margin: auto;
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.param-text{
+    width: 100%;
+    padding: 20px;
+    background:#181c22;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: #989898;
+}
+
+
+button[type="submit"]{
+    padding: 20px;
+    margin-top:20;
+    width: 30%;
+    /*float: left;*/
+    background: #181c22;
+    top: 10;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover{
+    color: #1abc9c !important;
+}
+
+.submit-params{
+    padding: 20px;
+    width: 100%;
+    /*float: left;*/
+    background: #23282e;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: arial;
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+li:hover{
+    text-decoration: none;
+    background: rgba(0,0,0,0.2);
+    color: #1abc9c !important;
+}
+
+a:visited, a:link, a:active{
+    text-decoration: none;
+    color: #636568;
+}
+
+a:hover{
+    color: #1abc9c !important;
+}
+
+h1{
+    margin-bottom: 100;
+    font-family: arial;
+    font-size: 40px;
+    text-align: center;
+    color: #1abc9c !important;
+}
+
+h2{
+    margin-bottom: 70;
+    font-family: arial;
+    font-size: 40px;
+    text-align: center;
+    color: #1abc9c !important;
+    clear: both;
+}
+
+footer{
+    margin-bottom: 100;
+    font-family: arial;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 20;
+    color: #1abc9c !important;
+    clear: both;
+}
+
+.bg-3 { 
+    background-color: #ffffff;
+    color: #555555;
+}
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    /*background: url(/assets/viking-icon.png) no-repeat center;*/
+    padding-top: 10px;
+    padding-bottom: 50px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+.active>a {
+  color: #1abc9c !important;
+}

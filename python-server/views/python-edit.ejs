@@ -1,0 +1,27 @@
+<html>
+    <head>
+      <title>Python Scripts</title>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="/assets/python.js"></script>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <% include partials/menu %>
+        <h2>Add / delete python script options.</h2>
+
+        <div id="python-script-table">
+            <form id="update-mongodb">
+                <input type="text" name="item" placeholder="Add new item..." required />
+                <button type="submit">Add Item</button>
+            </form>
+            <ul>
+                <% for(var i=0; i < todos.length; i++){ %>
+                    <li class = "edit"><%= todos[i].item %></li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>

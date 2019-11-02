@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <% include partials/menu %>
+      <title>Python Scripts</title>   
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="/assets/python.js"></script>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Select a Python script to run.</h1>
+        <div id="python-script-table">
+            <ul id = "navigation">
+                <% for(var i=0; i < todos.length; i++){ %>
+                    <% var link = '/python/parameters/' + todos[i].item.replace(/ /g, "-"); %>
+                    <li class="view"><a href = "<%= link %>" onclick = "loadURl('<%= link %>')"><%= todos[i].item %></a></li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>

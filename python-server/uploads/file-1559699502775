@@ -1,0 +1,3 @@
+﻿*Legal_Entity_Org_Code,Document_Number,Group_Id,Document_Date,Post_Date,Reversing_Entry,Reversing_Date,Recurring,Max_Occurrences,Reference,Description,Comments,Dtl_Acct,Dtl_Org_Code,Dtl_Reference,Dtl_Description,Dtl_Transaction_Date,Dtl_Debit_Amount,Dtl_Credit_Amount,Dtl_Proj_Org_Code,Dtl_Proj_Code,Dtl_Task_Name,Dtl_Proj_Type,Dtl_Exp_Type,Dtl_Person_Username,Dtl_Vendor_Org_Code
+OAS,,2019-5,5/10/2019,5/13/2019,N,,N,,2019-5,,,80.03.22,OAS,2019-5,Initial Data Load - Trial Balance,5/10/2019,180,0,,,,,,,
+OAS,,2019-5,5/10/2019,5/13/2019,N,,N,,2019-5,,,10.01.01,OAS,2019-5,Initial Data Load - Trial Balance,5/10/2019,0,180,,,,,,,
