@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<link rel= "stylesheet" href= "{{ url_for('static',filename='css/main.css') }}">
+<script src="{{url_for('static', filename='javascript/autofill.js')}}"></script>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>D.O.P.E.</title>
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+        <header>
+            <div class="container">
+                <h1 class="logo">Input</h1>
+                <strong>
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="about">About</a></li>
+                            <li><a href="input">Input</a></li>
+                            <li><a href="charts">Charts</a></li>
+                        </ul>
+                    </nav>
+                </strong>
+            </div>
+        </header>
+        <div id="parentElement">
+            <span id="childElement"></span>
+        </div>
+    <h3>Run</h3>
+      <p> The result displays the ten highest value contracts matching your criteria </p>
+    <!-- <label class="chk">Autogenerate: <input type="checkbox" name="autogen" value="y" id="autofill" onclick="addElement(x);"/></label> -->
+    <p>_________________________________________________________</p>
+    <div>
+        <form action="{{ url_for('input') }}" method="post">
+            <label class="input" for="set_aside">Set Aside
+                <select id="set_aside" name="set_aside" type="dropdown">
+                    <option value="None">None</option>
+                    <option value="SBA">SBA</option>
+                    <option value="8AN">8AN</option>
+                    <option value="8A">8A</option>
+                    <option value="SDVOSBC">SDVOBC</option>
+                    <option value="HZC">HZC</option>
+                    <option value="WOSB">WOSB</option>
+                </select>
+            </label>
+            <label class="input" for="psc_code">PSC Code: 
+                <select id="psc_code" name="psc_code" type="dropdown">
+                    <option value="All">All</option> 
+                    {% for psc_code in psc_codes %}
+                    <option value="{{psc_code.product_or_service_code_description}}">{{psc_code.product_or_service_code_description}}</option>
+                    {% endfor %}
+                </select>
+            </label>
+
+            <label class="submit"><button type="submit">Run</button></label>
+        </form>
+    </div>
+      <p>Accuracy: {{AccuracyScore}}  |  Precision: {{PrecisionScore}}  |  Recall: {{RecallScore}}  |  F1: {{F1Score}}</p>
+    <table>
+        <tr>
+            <th>Contract ID</th>
+            <th>Contract Value</th>
+            <th>Awarding Sub Agency</th>
+            <th>Awarding Office</th>
+            <th>PSC Code</th>
+        </tr>
+    {% for contract in contracts %}
+        <tr>
+            <th>{{contract.contract_transaction_unique_key}}</th>
+            <th id='contract_value'>${{contract.base_and_exercised_options_value}}</th>
+            <th>{{contract.awarding_sub_agency_name}}</th>
+            <th>{{contract.awarding_office_name}}</th>
+            <th>{{contract.product_or_service_code_description}}</th>
+        </tr>
+    {% endfor %}
+      </table>
+    </body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+<script>
+    assign("{{set_aside}}","{{psc_filter}}");
+    </script>
+</html>
+

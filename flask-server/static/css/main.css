@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'BebasNeue-Bold';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../fonts/BebasNeue/BebasNeue-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'BebasNeue';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../fonts/BebasNeue/BebasNeue-Regular.otf') format('opentype');
+}
+
+table, td, th { 
+    font-size: .87em;
+    padding: 10px; 
+    border: 1px solid black;
+    border-radius: 1px;
+    text-align: center;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+label.chk {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: left;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+
+label.submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: left;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    margin-left: 200px;
+}
+
+label.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    margin-left: 200px;
+}
+
+input[type="text"] {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+}
+button[type="submit"] {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+    background-color: #FFFFFF;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+button:hover {
+  background-color: #E8E3E2; /* White */
+  color: white;
+}
+
+select[type="dropdown"] {
+    height: 20px;
+    flex: 0 0 200px;
+    width: 200px;
+    margin-left: 10px;
+}
+
+option {
+    height: 20px;
+    flex: 0 0 200px;
+    width: 200px;
+    margin-left: 10px;
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    flex: 0 0 20px;
+    margin-left: 20px;
+}
+
+p {
+    height: 20px;
+    flex: 0 0 20px;
+    text-align: left;
+    margin-left: 200px;
+}
+
+
+img {
+    height: 300px;
+    flex: 0 0 20px;
+    text-align: left;
+    margin-left: 70px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    }
+    /*
+    * Formatting the header area
+    */
+    header {
+    background-color: #3c60a3;
+    height: 35px;
+    width: 100%;
+    opacity: .9;
+    margin-bottom: 10px;
+    }
+    header h1.logo {
+    margin: 0;
+    font-size: 1.7em;
+    font-family: 'BebasNeue-Bold', Fallback, sans-serif;
+    margin-left: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+    }
+    header h1.logo:hover {
+    color: #fff;
+    text-decoration: none;
+    text-align: left;
+    }
+    /*
+    * Centering the body content
+    */
+    .container {
+    width: 0 auto;
+    margin: 0 auto;
+    }
+
+    div.home {
+    padding: 10px 0 30px 0;
+    background-color: #E6E6FA;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    }
+    div.about {
+    padding: 10px 0 30px 0;
+    background-color: #E6E6FA;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    }
+    h1 {
+    font-size: 2em;
+    margin-top: 40px;
+    text-align: Left;
+    letter-spacing: 2px;
+    }
+    h2 {
+    font-size: 2em;
+    font-family: 'BebasNeue-Bold', Fallback, sans-serif;
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    }
+    h3 {
+    font-size: 1.7em;
+    font-family: 'BebasNeue', Fallback, sans-serif;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-left: 50px;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #999;
+    }
+
+    h4 {
+    font-size: 1em;
+    font-family: 'BebasNeue', Fallback, sans-serif;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-left: 180px;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #373737;
+    }
+
+    a:visited{
+      color:blue;
+    }
+    a.inline {
+    height: 20px;
+    flex: 0 0 20px;
+    text-align: left;
+    margin-left: 70px;
+    }
+    .menu {
+    float: right;
+    padding-right: 500;
+    margin-top: 8px;
+    }
+    .menu li {
+    display: inline;
+    }
+    .menu li + li {
+    margin-left: 35px;
+    }
+    .menu li a {
+    color:#ffffff;
+    text-decoration: none;
+    }
